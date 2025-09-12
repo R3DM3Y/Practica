@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="250"
+        x:Class="Practica.LoginWindow"
+        Title="LoginWindow"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Выберите режим работы:" FontSize="16"/>
+        
+        <Button x:Name="UserModeButton" 
+                Content="Пользователь" 
+                Click="UserModeButton_Click"
+                Padding="10,5"/>
+                
+        <Button x:Name="AdminModeButton" 
+                Content="Администратор" 
+                Click="AdminModeButton_Click"
+                Padding="10,5"/>
+                
+        <StackPanel x:Name="PasswordPanel" 
+                    IsVisible="False"
+                    Spacing="5">
+            <TextBlock Text="Введите пароль администратора:"/>
+            <TextBox x:Name="PasswordBox" 
+                     PasswordChar="*"/>
+            <Button Content="Войти" 
+                    Click="AdminLoginButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

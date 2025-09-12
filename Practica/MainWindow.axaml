@@ -1,0 +1,174 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+        x:Class="Practica.MainWindow"
+        x:CompileBindings="False"
+        Title="Property"
+        RequestedThemeVariant="Light">
+    
+    <DockPanel Margin="10">
+        <Border DockPanel.Dock="Top" 
+                Background="#F0F0F0" 
+                Padding="15"
+                CornerRadius="8"
+                Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Spacing="15" HorizontalAlignment="Center">
+                <Button x:Name="MenuButton" 
+                        Width="40" 
+                        Height="40"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover">
+                            <Setter Property="Background" Value="#E0E0E0"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Style>
+                        <Style Selector="Button:pressed">
+                            <Setter Property="Background" Value="#D0D0D0"/>
+                        </Style>
+                    </Button.Styles>
+                    <TextBlock Text="☰" FontSize="20" VerticalAlignment="Center"/>
+                </Button> 
+                <TextBox x:Name="Search" Width="300" Height="40"
+                         Watermark="Поиск недвижимости..." FontSize="14"/>
+                <ComboBox x:Name="Sort" Width="200" Height="40" VerticalAlignment="Center" FontSize="14" SelectedIndex="0">
+                    <ComboBoxItem>Без сортировки</ComboBoxItem>
+                    <ComboBoxItem>Цена: по убыванию</ComboBoxItem>
+                    <ComboBoxItem>Цена: по возрастанию</ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="UserSwitchButton"
+                        Content="👤"
+                        Width="40"
+                        Height="40"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        ToolTip.Tip="Режим пользователя"
+                        Click="UserSwitchButton_Click">
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover">
+                            <Setter Property="Background" Value="#E0E0E0"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Style>
+                        <Style Selector="Button[Tag=admin]">
+                            <Setter Property="Background" Value="#FF4F00"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </StackPanel>
+        </Border>
+        
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="5" Spacing="10">
+            <TextBlock x:Name="RecordsCounter" FontWeight="Bold"/>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>    
+            </Grid.ColumnDefinitions>
+            <Border x:Name="FiltersPanel" Grid.Column="0"
+                    Width="250"
+                    Background="White"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="0,0,1,0"
+                    HorizontalAlignment="Left"
+                    Margin="-250,0,0,0"
+                    ZIndex="1000">
+                <ScrollViewer>
+                    <StackPanel Spacing="10" Margin="10">
+                        <TextBlock Text="Фильтры" FontWeight="Bold" FontSize="16"/>
+                        
+                        <Border Background="White" Padding="10" CornerRadius="5" BorderBrush="#E0E0E0" BorderThickness="1">
+                            <StackPanel>
+                                <TextBlock Text="Цена" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <TextBox x:Name="PriceFromBox" Watermark="От" Width="80"/>
+                                    <TextBox x:Name="PriceToBox" Watermark="До" Width="80"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        
+                        <Border Background="White" Padding="10" CornerRadius="5" BorderBrush="#E0E0E0" BorderThickness="1">
+                            <StackPanel>
+                                <TextBlock Text="Площадь" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <TextBox x:Name="AreaFromBox" Watermark="От" Width="80"/>
+                                    <TextBox x:Name="AreaToBox" Watermark="До" Width="80"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        
+                        <Border Background="White" Padding="10" CornerRadius="5" BorderBrush="#E0E0E0" BorderThickness="1">
+                            <StackPanel>
+                                <TextBlock Text="Комнаты" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                                <CheckBox x:Name="Room1CheckBox" Content="1 комната" Margin="0,2"/>
+                                <CheckBox x:Name="Room2CheckBox" Content="2 комнаты" Margin="0,2"/>
+                                <CheckBox x:Name="Room3CheckBox" Content="3 комнаты" Margin="0,2"/>
+                                <CheckBox x:Name="Room4PlusCheckBox" Content="4 и более комнат" Margin="0,2"/>
+                            </StackPanel>
+                        </Border>
+                        <Button Content="Сбросить фильтры" 
+                                Click="ResetFiltersButton_Click"
+                                Margin="0,10,0,0"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            
+            <ListBox x:Name="PropertyList" Grid.Column="1"
+                     Background="White"
+                     BorderThickness="0"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     SelectionMode="Single">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White"
+                                Margin="0,0,0,10"
+                                CornerRadius="8"
+                                Padding="15"
+                                BorderBrush="#E0E0E0"
+                                BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="150"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Border Grid.Column="0" Width="180" Height="120"
+                                        CornerRadius="5" Background="#F5F5F5">
+                                    <Image Source="{Binding Image}" Stretch="UniformToFill"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                
+                                <StackPanel Grid.Column="1" Margin="15,0">
+                                    <TextBlock Text="{Binding Title}" FontSize="16" FontWeight="Bold"
+                                               TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding Address}" FontSize="12" Foreground="#666"
+                                               TextWrapping="Wrap" Margin="0,0,0,8"/>
+                                    <StackPanel Orientation="Horizontal" Spacing="15">
+                                        <TextBlock Text="{Binding Rooms, StringFormat='{}Комнат: {0}'}" FontSize="12"/>
+                                        <TextBlock Text="{Binding Area, StringFormat='{}Площадь: {0} м²'}" FontSize="12"/>
+                                        <TextBlock Text="{Binding Floor, StringFormat='{}Этаж: {0}/{1}', 
+                                                   ConverterParameter={Binding TotalFloors}}" FontSize="12"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="2" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding Price, StringFormat='{}₽ {0:N0}'}" FontSize="18"
+                                               FontWeight="Bold" Foreground="#FF4F00" Margin="0,0,0,10"/>
+                                    <Button Content="Подробнее" Width="120" Height="35"
+                                            Background="#FF4F00" Foreground="White" FontSize="14" CornerRadius="5"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </DockPanel>
+</Window>
