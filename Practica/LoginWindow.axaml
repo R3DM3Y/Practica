@@ -1,32 +1,39 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="250"
         x:Class="Practica.LoginWindow"
-        Title="LoginWindow"
-        WindowStartupLocation="CenterOwner">
-    <StackPanel Margin="20" Spacing="15">
-        <TextBlock Text="Выберите режим работы:" FontSize="16"/>
-        
+        Title="Выберите режим работы"
+        Width="300"
+        Height="250"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        RequestedThemeVariant="Light">
+    
+    <StackPanel Margin="15" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Выберите режим работы:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+
         <Button x:Name="UserModeButton" 
-                Content="Пользователь" 
+                Content="👤 Пользователь" 
                 Click="UserModeButton_Click"
-                Padding="10,5"/>
+                Width="200"
+                Height="35"/>
                 
         <Button x:Name="AdminModeButton" 
-                Content="Администратор" 
+                Content="🔧 Администратор" 
                 Click="AdminModeButton_Click"
-                Padding="10,5"/>
+                Width="200"
+                Height="35"/>
                 
-        <StackPanel x:Name="PasswordPanel" 
-                    IsVisible="False"
-                    Spacing="5">
-            <TextBlock Text="Введите пароль администратора:"/>
+        <StackPanel x:Name="PasswordPanel" IsVisible="False" Spacing="5">
+            <TextBlock Text="Введите пароль администратора:" FontWeight="SemiBold"/>
             <TextBox x:Name="PasswordBox" 
-                     PasswordChar="*"/>
-            <Button Content="Войти" 
-                    Click="AdminLoginButton_Click"/>
+                     PasswordChar="*"
+                     Watermark="Пароль"
+                     Width="200"
+                     Height="30"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                <Button Content="Отмена" Click="CancelButton_Click" Width="80"/>
+                <Button Content="Войти" Click="AdminLoginButton_Click" Width="80" Background="#FF4F00" Foreground="White"/>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
-</Window>
+</Window>   

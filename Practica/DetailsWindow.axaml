@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Practica.DetailsWindow"
+        Width="450" Height="600"
+        Background="WhiteSmoke"
+        Title="Детали недвижимости"
+        CanResize="False"
+        x:CompileBindings="False">
+
+    <Border Padding="15" Background="White" CornerRadius="8" Margin="10">
+        <StackPanel Spacing="15">
+            
+            <!-- Заголовок -->
+            <TextBlock Text="{Binding Title}" 
+                       FontSize="24" FontWeight="Bold" 
+                       Foreground="Black" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+
+            <!-- Фото -->
+            <Border CornerRadius="8" BorderBrush="#CCC" BorderThickness="1">
+                <Image Source="{Binding Image}" Height="220" Stretch="UniformToFill"/>
+            </Border>
+
+            <!-- Основная информация -->
+            <StackPanel Spacing="8">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Адрес:" FontWeight="Bold" Foreground="Black"/>
+                    <TextBlock Text="{Binding Address}" Foreground="Black" TextWrapping="Wrap"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Цена:" FontWeight="Bold" Foreground="Black"/>
+                    <TextBlock Text="{Binding Price, StringFormat={}{0:N0} ₽}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Площадь:" FontWeight="Bold" Foreground="Black"/>
+                    <TextBlock Text="{Binding Area, StringFormat='{}{0} м²'}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Комнат:" FontWeight="Bold" Foreground="Black"/>
+                    <TextBlock Text="{Binding Rooms}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Этаж/Этажность:" FontWeight="Bold" Foreground="Black"/>
+                    <TextBlock Text="{Binding Floor, StringFormat='{}{0}'}" Foreground="Black"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Описание -->
+            <StackPanel>
+                <TextBlock Text="Описание:" FontWeight="Bold" Foreground="Black"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Foreground="Black"/>
+            </StackPanel>
+
+            <!-- Кнопка закрытия -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                <Button Content="Закрыть" Width="120" Height="35" Background="#FF4F00" Foreground="White" FontSize="14" CornerRadius="5" Click="CloseButton_Click" Cursor="Hand"/>
+                <Button Content="Выбрать" Width="120" Height="35" Background="#28A745" Foreground="White" FontSize="14" CornerRadius="5" Click="SelectButton_Click" Cursor="Hand"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

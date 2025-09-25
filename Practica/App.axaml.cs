@@ -15,7 +15,12 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            var mainWindow = new MainWindow();
+
+            // Ждем, пока MainWindow станет видимым, и тогда открываем окно логина
+            mainWindow.Opened += (_, _) => mainWindow.OpenLoginWindowOnStart(isStartup: true);
+
+            desktop.MainWindow = mainWindow;
         }
 
         base.OnFrameworkInitializationCompleted();

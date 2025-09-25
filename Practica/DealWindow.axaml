@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Practica.DealWindow"
+        Width="400" Height="250"
+        Background="White"
+        Title="Оформление сделки"
+        CanResize="False"
+        x:CompileBindings="False">
+
+    <Border Padding="15" Background="White" CornerRadius="8" Margin="10">
+        <StackPanel Spacing="20">
+
+            <!-- Название объекта -->
+            <TextBlock x:Name="TitleTextBlock"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"
+                       Foreground="Black"/>
+
+            <!-- Телефон -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                <TextBlock Text="Телефон:" FontWeight="Bold" Foreground="Black"/>
+                <TextBlock x:Name="PhoneTextBlock" Text="**********" Foreground="Black"/>
+            </StackPanel>
+
+            <!-- Инструкция -->
+            <TextBlock Text="Для продолжения оформления сделки свяжитесь с этим человеком."
+                       TextWrapping="Wrap"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Foreground="Black"/>
+
+            <!-- Кнопка закрытия -->
+            <Button Content="Закрыть"
+                    Width="120"
+                    Height="35"
+                    Background="#FF4F00"
+                    Foreground="White"
+                    FontSize="14"
+                    Cursor="Hand"
+                    HorizontalAlignment="Center"
+                    Click="CloseButton_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

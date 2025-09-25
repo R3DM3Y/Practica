@@ -3,6 +3,12 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Practica/AddWindow.axaml" value="Practica/Practica.csproj" />
+        <entry key="Practica/App.axaml" value="Practica/Practica.csproj" />
+        <entry key="Practica/DealWindow.axaml" value="Practica/Practica.csproj" />
+        <entry key="Practica/DeleteWindow.axaml" value="Practica/Practica.csproj" />
+        <entry key="Practica/DetailsWindow.axaml" value="Practica/Practica.csproj" />
+        <entry key="Practica/EditWindow.axaml" value="Practica/Practica.csproj" />
         <entry key="Practica/LoginWindow.axaml" value="Practica/Practica.csproj" />
         <entry key="Practica/MainWindow.axaml" value="Practica/Practica.csproj" />
         <entry key="Practica/PasswordInputWindow.axaml" value="Practica/Practica.csproj" />

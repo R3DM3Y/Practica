@@ -1,7 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
 
 namespace Practica;
 
@@ -10,7 +9,7 @@ public partial class LoginWindow : Window
     private const string AdminPassword = "0000";
     
     public bool IsAdmin { get; private set; }
-    public bool IsAuthenticated { get; private set; }
+    public bool? DialogResult { get; private set; }
 
     public LoginWindow()
     {
@@ -20,8 +19,7 @@ public partial class LoginWindow : Window
     private void UserModeButton_Click(object sender, RoutedEventArgs e)
     {
         IsAdmin = false;
-        IsAuthenticated = true;
-        Close();
+        Close(true); // Возвращаем true
     }
 
     private void AdminModeButton_Click(object sender, RoutedEventArgs e)
@@ -34,19 +32,18 @@ public partial class LoginWindow : Window
         if (PasswordBox.Text == AdminPassword)
         {
             IsAdmin = true;
-            IsAuthenticated = true;
-            Close();
+            Close(true); // Возвращаем true
         }
         else
         {
-            var errorMsg = new Window
-            {
-                Title = "Ошибка",
-                Content = new TextBlock { Text = "Неверный пароль!" },
-                SizeToContent = SizeToContent.WidthAndHeight,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner
-            };
-            errorMsg.ShowDialog(this);
+            PasswordBox.Text = "";
+            PasswordBox.Focus();
         }
     }
+
+    private void CancelButton_Click(object sender, RoutedEventArgs e)
+    {
+        Close(false); // Возвращаем false
+    }
+
 }

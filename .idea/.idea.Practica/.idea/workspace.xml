@@ -7,7 +7,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dd099fb-73d2-4b91-965a-548dfc10f0a8" name="Changes" comment="" />
+    <list default="true" id="3dd099fb-73d2-4b91-965a-548dfc10f0a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Practica/AddWindow.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/AddWindow.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DealWindow.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DealWindow.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DeleteWindow.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DeleteWindow.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DetailsWindow.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/DetailsWindow.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/EditWindow.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/EditWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/avalonia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practica/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/App.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/App.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/LoginWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/LoginWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/LoginWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/LoginWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/MainWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/MainWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/PasswordInputWindow.axaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/PasswordInputWindow.axaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/bin/Debug/net8.0/Practica.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/references" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/references" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/resources" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Avalonia/resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/Practica.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/ref/Practica.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/ref/Practica.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/refint/Practica.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/obj/Debug/net8.0/refint/Practica.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +54,9 @@
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Desktop/DemoProject/DemoProject/MainWindow.axaml.cs" root0="SKIP_HIGHLIGHTING" />
@@ -31,6 +73,7 @@
   &quot;keyToString&quot;: {
     &quot;.NET Project.Practica.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,6 +119,12 @@
       <workItem from="1757490059529" duration="3568000" />
       <workItem from="1757572450455" duration="5750000" />
       <workItem from="1757655271928" duration="299000" />
+      <workItem from="1757657700374" duration="127000" />
+      <workItem from="1758007979584" duration="2551000" />
+      <workItem from="1758177899035" duration="1198000" />
+      <workItem from="1758708755872" duration="5835000" />
+      <workItem from="1758782562769" duration="6187000" />
+      <workItem from="1758794115392" duration="6328000" />
     </task>
     <servers />
   </component>

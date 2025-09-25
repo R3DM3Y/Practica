@@ -146,3 +146,5 @@ C:\Users\romas\RiderProjects\Practica\Practica\obj\Debug\net8.0\refint\Practica.
 C:\Users\romas\RiderProjects\Practica\Practica\obj\Debug\net8.0\Practica.pdb
 C:\Users\romas\RiderProjects\Practica\Practica\obj\Debug\net8.0\Practica.genruntimeconfig.cache
 C:\Users\romas\RiderProjects\Practica\Practica\obj\Debug\net8.0\ref\Practica.dll
+C:\Users\romas\RiderProjects\Practica\Practica\bin\Debug\net8.0\DialogHost.Avalonia.dll
+C:\Users\romas\RiderProjects\Practica\Practica\bin\Debug\net8.0\MsBox.Avalonia.dll
